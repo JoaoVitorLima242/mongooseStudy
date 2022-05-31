@@ -24,4 +24,10 @@ const pessoaSchema = new Schema<IPessoa>({
     profissao: String,
 });
 
-// const pessoa = model<IPessoa>
+const Pessoa = model<IPessoa>("Pessoa", pessoaSchema);
+
+const matheus :IPessoa = new Pessoa({
+    nome: "Matheus",
+    idade: 30,
+    profissao: 'programador'
+}) 
