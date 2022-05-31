@@ -26,8 +26,18 @@ const pessoaSchema = new Schema<IPessoa>({
 
 const Pessoa = model<IPessoa>("Pessoa", pessoaSchema);
 
-const matheus :IPessoa = new Pessoa({
-    nome: "Matheus",
-    idade: 30,
-    profissao: 'programador'
+// const matheus = new Pessoa({
+//     nome: "Joao",
+//     idade: 32,
+//     profissao: 'estudante'
+// }) 
+
+// matheus.save((err) => {
+//     if(err) {
+//         console.log(err)
+//     }
+// })
+
+Pessoa.findOne({nome: "Matheus"}, (err, result) => {
+    console.log(result)
 }) 
