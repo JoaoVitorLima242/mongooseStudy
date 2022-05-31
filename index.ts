@@ -56,3 +56,19 @@ const getPessoas  = async () : Promise<void> => {
 }
 
 getPessoas()
+
+const getPessoa  = async (nome: string) : Promise<void> => {
+
+    const pessoa: IPessoa = await Pessoa.findOne({nome: nome}).exec();
+
+    if(!pessoa) {
+        console.log("Nao encontrou")
+    } else {
+        console.log(pessoa)
+    }
+
+}
+
+// Pessoa.deleteOne({nome: "Pedro"}).exec();
+
+// getPessoa("Pedro")
