@@ -38,6 +38,13 @@ const Pessoa = model<IPessoa>("Pessoa", pessoaSchema);
 //     }
 // })
 
-Pessoa.findOne({nome: "Matheus"}, (err, result) => {
-    console.log(result)
-}) 
+// Pessoa.findOne({nome: "Matheus"}, (err, result) => {
+//     console.log(result)
+// }) 
+
+
+// Pessoa.insertMany([
+//     {nome: "Roberto", idade: 23, profissao: "Professor" },
+//     {nome: "Maria", idade: 23, profissao: "TI" },
+//     {nome: "Pedro", idade: 35, profissao: "Pescador" },
+// ])
