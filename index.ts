@@ -49,13 +49,13 @@ const Pessoa = model<IPessoa>("Pessoa", pessoaSchema);
 //     {nome: "Pedro", idade: 35, profissao: "Pescador" },
 // ])
 
-const getPessoas  = async () : Promise<void> => {
-    const pessoas = await Pessoa.find({}).exec();
+// const getPessoas  = async () : Promise<void> => {
+//     const pessoas = await Pessoa.find({}).exec();
 
-    console.log(pessoas)
-}
+//     console.log(pessoas)
+// }
 
-getPessoas()
+// getPessoas()
 
 const getPessoa  = async (nome: string) : Promise<void> => {
 
@@ -72,3 +72,7 @@ const getPessoa  = async (nome: string) : Promise<void> => {
 // Pessoa.deleteOne({nome: "Pedro"}).exec();
 
 // getPessoa("Pedro")
+
+// Pessoa.updateOne({nome: "Joao"}, {profissao: "Juiz"}).exec();
+
+// getPessoa("Joao")
