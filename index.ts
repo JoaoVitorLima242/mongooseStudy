@@ -77,17 +77,17 @@ const getPessoa  = async (nome: string) : Promise<void> => {
 
 // getPessoa("Joao")
 
-const getPessoaNomeIdade = async ( nome : string, idade : number) : Promise<void> => {
+// const getPessoaNomeIdade = async ( nome : string, idade : number) : Promise<void> => {
 
-    const pessoa = await Pessoa.where(nome).gte(idade)
-                                .where("nome", nome)
-                                .exec();
+//     const pessoa = await Pessoa.where(nome).gte(idade)
+//                                 .where("nome", nome)
+//                                 .exec();
 
-    if(!pessoa) {
-        console.log('pessoa nao existe')
-    } else {
-        console.log(pessoa)
-    }
-};
+//     if(!pessoa) {
+//         console.log('pessoa nao existe')
+//     } else {
+//         console.log(pessoa)
+//     }
+// };
 
-getPessoaNomeIdade("Matheus", 30)
+// getPessoaNomeIdade("Matheus", 30)
