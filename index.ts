@@ -48,3 +48,11 @@ const Pessoa = model<IPessoa>("Pessoa", pessoaSchema);
 //     {nome: "Maria", idade: 23, profissao: "TI" },
 //     {nome: "Pedro", idade: 35, profissao: "Pescador" },
 // ])
+
+const getPessoas  = async () : Promise<void> => {
+    const pessoas = await Pessoa.find({}).exec();
+
+    console.log(pessoas)
+}
+
+getPessoas()
